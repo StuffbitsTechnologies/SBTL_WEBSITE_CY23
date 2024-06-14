@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Ninestars Bootstrap Template</title>
+  <title>Blog Details - Ninestars Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -41,12 +41,10 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
       <div class="logo">
         <!-- Uncomment below if you prefer to use an image logo -->
         <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
       </div>
-
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
@@ -59,7 +57,6 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
     </div>
   </header><!-- End Header -->
 
@@ -68,110 +65,75 @@
     <!-- ======= Breadcrumbs Section ======= -->
     <section class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Blog</h2>
+          <h2>Blog Details</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Blog</li>
+            <li><a href="blog.html">Blog</a></li>
+            <li>Blog Details</li>
           </ol>
         </div>
-
       </div>
-    </section><!-- Breadcrumbs Section -->
+    </section><!-- End Breadcrumbs Section -->
 
-    <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog">
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog-details" class="blog-details">
       <div class="container">
-
         <div class="row">
+          <div class="col-lg-8">
 
-          <div class="col-lg-8 entries">
+            <article class="blog-details">
+              
 
-            <article class="entry" data-category="technology">
-              <div class="entry-img">
-                <img src="assets/img/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-details.html">AUTOMOTIVE SOFTWARE</a>
-              </h2>
-              <div class="entry-content">
-                <p>
-                  Automotive software is essential in modern vehicles, transforming them into intelligent, connected machines. It manages a range of functions, from engine control to advanced safety features and autonomous driving.
-                </p>
-                <div class="read-more">
-                  <a href="blog-details.html">Read More</a>
-                </div>
-              </div>
-            </article><!-- End blog entry -->
+              <h2 class="blog-title">Controller Area Network (CAN)</h2>
 
-            <article class="entry" data-category="innovation">
-              <div class="entry-img">
-                <img src="assets/img/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-details1.html">IIOT</a>
-              </h2>
-              <div class="entry-content">
-                <p>
-                  Imagine industrial machines that communicate seamlessly, optimizing processes autonomously. This is the Industrial Internet of Things (IIoT), where smart sensors and advanced analytics revolutionize industries.
-                </p>
-                <div class="read-more">
-                  <a href="blog-details1.html">Read More</a>
-                </div>
-              </div>
-            </article><!-- End blog entry -->
+              <div class="meta-top">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><i class="bi bi-person"></i> <a href="#">Kumar Sawant</a></li>
+                  <li class="list-inline-item"><i class="bi bi-clock"></i> <a href="#"><time datetime="2023-07-31">31 July, 2023</time></a></li>
+                  <li class="list-inline-item"><i class="bi bi-folder"></i> <a href="#">Embedded Software Development</a></li>
+                </ul>
+              </div><!-- End meta top -->
 
-            <article class="entry" data-category="engineering">
-              <div class="entry-img">
-                <img src="assets/img/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-details2.html">INDUSTRIAL INSTRUMENTATION</a>
-              </h2>
-              <div class="entry-content">
-                <p>
-                  Picture a factory where precision and efficiency are paramount, with machines that not only perform tasks but also monitor, adjust, and optimize their own performance. This is the realm of Industrial Instrumentation.
-                </p>
-                <div class="read-more">
-                  <a href="blog-details2.html">Read More</a>
-                </div>
-              </div>
-            </article><!-- End blog entry -->
+              <div class="content">
+                <h3>Introduction</h3>
+                <p>Controller Area Network (CAN) is a communication protocol widely used in automotive and industrial applications for reliable, real-time data transmission. Developed by Bosch, CAN features deterministic communication, multi-master bus architecture, robust error handling, and scalability. It supports critical functions like engine control, ABS, and industrial automation, making it essential for systems requiring high reliability and low latency. With variants like CAN FD for higher data rates, CAN continues to be a cornerstone in modern interconnected systems.</p>
+                
+                <!-- Adding an image in the introduction section -->
+                <img src="https://www.allaboutcircuits.com/uploads/articles/CAN.jpg" alt="Introduction Image" class="img-fluid rounded my-4">
+              
+                <h3>What is Controller Area Network (CAN)?</h3>
+                <p> Controller Area Network (CAN) is a robust serial communication protocol originally developed by Bosch for use in automotive and industrial applications. It enables microcontrollers and devices to communicate with each other within a network without a host computer. CAN is known for its reliability, deterministic communication, and high immunity to noise, making it suitable for real-time control applications.</p>
+                
+                <!-- Adding an image in the What is AUTOSAR section -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROu1CZdMuLLU44KgnghRfVB6Gl_6n3b4bX6A&s" alt="AUTOSAR Explanation" class="img-fluid rounded my-4">
+              
+                <h3>Key Features of Controller Area Network (CAN)</h3>
+                <p><strong>Scalability:</strong> CAN networks can be easily expanded by adding more nodes (devices) or segments without significant changes to the existing network.</p>
+                <p><strong>Data Integrity:</strong> CAN ensures data integrity through mechanisms like cyclic redundancy check (CRC), ensuring that transmitted data remains intact.</p>
+                <p><strong>Low Latency:</strong> Messages are transmitted with low latency, making CAN suitable for real-time applications where timely data transmission is critical.</p>
+                
+                <!-- Adding an image in the Key Features section -->
+                <img src="https://www.researchgate.net/publication/319023018/figure/fig2/AS:525820625600512@1502376814968/General-idea-of-Controller-Area-Network-CAN-bus-GPS-Global-Positioning-System.png" alt="Key Features of AUTOSAR" class="img-fluid rounded my-4">
+                
+                <p><strong>Wide Industry Adoption:</strong> Beyond automotive and industrial sectors, CAN is used in various applications such as aerospace, medical devices, and consumer electronics, where reliable and robust communication is required.</p>
+                <p><strong>Error Handling: </strong> AN has built-in mechanisms for detecting and managing errors, enhancing reliability.</p>
+              </div><!-- End content -->
 
-            <article class="entry" data-category="case-studies">
-              <div class="entry-img">
-                <img src="assets/img/blog-4.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-details3.html">DIGITAL SERVICES</a>
-              </h2>
-              <div class="entry-content">
-                <p>
-                  Imagine a world where everything you need is just a click away—shopping, banking, entertainment, and even healthcare. Welcome to the era of Digital Services, where technology transforms everyday experiences into seamless digital interactions.
-                </p>
-                <div class="read-more">
-                  <a href="blog-details3.html">Read More</a>
-                </div>
-              </div>
-            </article><!-- End blog entry -->
+              </div><!-- End meta bottom -->
+
+            </article><!-- End blog post -->
 
           </div><!-- End blog entries list -->
 
-          <div class="col-lg-4">
-
-            <div class="sidebar">
-              <!-- The recent blogs section was here and has been removed. -->
+          
+                </div>
+              </div><!-- End sidebar recent posts-->
             </div><!-- End sidebar -->
-
           </div><!-- End blog sidebar -->
-
         </div><!-- End blog row -->
-
       </div><!-- End blog container -->
-
-    </section><!-- End Blog Section -->
-
+    </section><!-- End Blog Details Section -->
   </main><!-- End main -->
 
   <!-- ======= Footer ======= -->
@@ -181,9 +143,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>StuffBits</h3>
-            <p></p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
@@ -196,7 +156,6 @@
               <li><i class="bi bi-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
@@ -207,7 +166,6 @@
               <li><i class="bi bi-chevron-right"></i> <a href="#">Front End Design and Development</a></li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
@@ -217,20 +175,11 @@
               <strong>Phone:</strong> +91 7620274757<br>
               <strong>Email:</strong> contact@stuffbits.com<br>
             </p>
-
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-
           </div>
-
         </div>
       </div>
     </div>
-
+  
     <div class="container py-4">
       <div class="copyright">
         &copy; Developed by  <strong><span>Stuffbits</span></strong>. All Rights Reserved
@@ -242,6 +191,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -256,4 +206,3 @@
 </body>
 
 </html>
-
