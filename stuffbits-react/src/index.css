@@ -8,6 +8,7 @@
   html {
     scroll-behavior: smooth;
     width: 100%;
+    min-width: 0;
     overflow-x: hidden;
     overflow-x: clip;
     -webkit-text-size-adjust: 100%;
@@ -15,8 +16,13 @@
   }
   body {
     @apply font-body text-slate-800 antialiased w-full min-h-screen overflow-x-hidden;
+    min-width: 0;
     min-height: 100dvh;
     overflow-x: clip;
+  }
+  #root {
+    width: 100%;
+    min-width: 0;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-semibold;
