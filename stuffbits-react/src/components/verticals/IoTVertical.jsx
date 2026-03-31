@@ -134,7 +134,7 @@ export default function IoTVertical() {
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-video rounded-xl overflow-hidden bg-navy-gradient shadow-xl border border-slate-200">
+              <div className="aspect-video rounded-xl overflow-hidden bg-navy shadow-xl border border-slate-200">
                 <img
                   src={HERO_IMAGE}
                   alt="IoT embedded development"
@@ -180,7 +180,7 @@ export default function IoTVertical() {
       </section>
 
       {/* Technologies */}
-      <section className="py-16 md:py-20 bg-navy-gradient">
+      <section className="py-16 md:py-20 bg-navy">
         <div className="max-w-container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-10">
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">
@@ -229,7 +229,7 @@ export default function IoTVertical() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-2xl bg-navy-gradient px-8 py-12 md:px-14 md:py-14 text-center"
+            className="relative overflow-hidden rounded-2xl bg-navy px-8 py-12 md:px-14 md:py-14 text-center"
           >
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">
               Ready to Build Your Next IoT Product?

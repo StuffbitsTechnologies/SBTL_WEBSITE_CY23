@@ -126,7 +126,7 @@ export default function EventStoryModal({
                       href={primaryAction.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-gradient text-white font-semibold hover:brightness-110 transition-all"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy text-white font-semibold hover:brightness-110 transition-all"
                     >
                       {primaryAction.label}
                       <ExternalLink size={18} />
@@ -135,7 +135,7 @@ export default function EventStoryModal({
                     <Link
                       to={primaryAction.href}
                       onClick={onClose}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-gradient text-white font-semibold hover:brightness-110 transition-all"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy text-white font-semibold hover:brightness-110 transition-all"
                     >
                       {primaryAction.label}
                     </Link>

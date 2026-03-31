@@ -89,7 +89,7 @@ export default function ClientsTrusted() {
                     }}
                   />
                   {hoveredIndex === i && (
-                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-md bg-navy-gradient text-white text-sm font-medium whitespace-nowrap shadow-lg z-20 pointer-events-none">
+                    <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 rounded-md bg-navy text-white text-sm font-medium whitespace-nowrap shadow-lg z-20 pointer-events-none">
                       {client.name}
                     </div>
                   )}

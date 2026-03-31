@@ -47,7 +47,7 @@ export default function VerticalDetailPage() {
     <div className="pb-0">
       {/* Breadcrumb only when we have dedicated content (e.g. Automotive) */}
       {VerticalComponent && (
-        <section className="bg-navy-gradient py-6 relative overflow-hidden">
+        <section className="bg-navy py-6 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
           <div className="max-w-container mx-auto px-6 relative">
             <motion.nav
@@ -75,7 +75,7 @@ export default function VerticalDetailPage() {
       ) : (
         <>
           {/* Placeholder hero for verticals not yet built */}
-          <section className="bg-navy-gradient py-16">
+          <section className="bg-navy py-16">
             <div className="max-w-container mx-auto px-6">
               <motion.nav
                 initial={{ opacity: 0, x: -12 }}

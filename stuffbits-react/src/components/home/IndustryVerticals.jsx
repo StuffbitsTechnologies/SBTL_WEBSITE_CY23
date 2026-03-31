@@ -40,7 +40,7 @@ export default function IndustryVerticals() {
   const VerticalIcon = vertical.icon
 
   return (
-    <section id="industries" className="py-20 bg-navy-gradient">
+    <section id="industries" className="py-20 bg-navy">
       <div className="max-w-container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

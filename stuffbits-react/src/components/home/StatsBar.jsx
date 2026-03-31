@@ -41,7 +41,7 @@ export default function StatsBar() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section ref={ref} className="bg-navy-gradient py-14">
+    <section ref={ref} className="bg-navy py-14">
       <div className="max-w-container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

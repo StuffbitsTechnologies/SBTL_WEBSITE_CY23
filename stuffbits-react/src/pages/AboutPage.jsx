@@ -69,7 +69,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* Page Hero */}
-      <section className="bg-navy-gradient py-16 relative overflow-hidden">
+      <section className="bg-navy py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
           <motion.nav
@@ -103,10 +103,10 @@ export default function AboutPage() {
 
       {/* Company Story */}
       <section className="py-20 bg-white relative overflow-hidden">
-        <div
+        {/* <div
           aria-hidden
-          className="pointer-events-none absolute left-0 right-0 top-0 h-20 md:h-24 bg-navy-gradient z-0 [clip-path:polygon(0%_0%,58%_0%,45%_100%,0%_100%)]"
-        />
+          className="pointer-events-none absolute left-0 right-0 top-0 h-20 md:h-24 bg-navy z-0 [clip-path:polygon(0%_0%,58%_0%,45%_100%,0%_100%)]"
+        /> */}
         <div className="max-w-container mx-auto px-6 relative z-10">
           <motion.div {...fadeUp} className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div className="max-w-3xl">
@@ -313,7 +313,7 @@ export default function AboutPage() {
       </section> */}
 
       {/* CTA */}
-      <section className="py-20 bg-navy-gradient">
+      <section className="py-20 bg-navy">
         <div className="max-w-container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

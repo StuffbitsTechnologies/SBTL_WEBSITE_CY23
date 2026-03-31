@@ -217,7 +217,7 @@ export default function LinkedInEventsSection() {
                 href={LINKEDIN_COMPANY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-navy-gradient text-white font-semibold rounded-xl hover:brightness-110 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-xl hover:brightness-110 transition-all"
               >
                 Open all posts on LinkedIn
                 <ArrowRight size={18} />
@@ -232,7 +232,7 @@ export default function LinkedInEventsSection() {
               href={LINKEDIN_COMPANY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-navy-gradient text-white font-semibold rounded-lg"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-lg"
             >
               <Linkedin size={22} />
               StuffBits on LinkedIn

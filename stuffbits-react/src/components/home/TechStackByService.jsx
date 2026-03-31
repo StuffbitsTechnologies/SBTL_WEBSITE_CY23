@@ -13,7 +13,6 @@ const SERVICES = [
     title: 'Embedded Hardware (incl. PCB Layout)',
     icon: Cpu,
     accent: 'bg-cyan-500/10 group-hover:bg-cyan-500/15',
-    iconColor: 'text-cyan-700',
     tags: [
       'STM32',
       'NXP',
@@ -36,21 +35,18 @@ const SERVICES = [
     title: 'Embedded Firmware',
     icon: Code2,
     accent: 'bg-emerald-500/10 group-hover:bg-emerald-500/15',
-    iconColor: 'text-emerald-700',
     tags: ['C/C++', 'FreeRTOS', 'Zephyr', 'AUTOSAR', 'MISRA-C', 'CAN', 'CAN FD', 'OTA'],
   },
   {
     title: 'Production',
     icon: Package,
     accent: 'bg-amber-500/10 group-hover:bg-amber-500/15',
-    iconColor: 'text-amber-700',
     tags: ['SMT', 'Through-Hole', 'ICT', 'Functional Test', 'DFA', 'Supply Chain', 'BOM'],
   },
   {
     title: 'Software Development',
     icon: Monitor,
     accent: 'bg-blue-500/10 group-hover:bg-blue-500/15',
-    iconColor: 'text-blue-700',
     tags: ['React', 'Node.js', 'Golang', 'Java', 'Python', 'REST API', 'Cloud', 'Mobile Apps', 'MQTT'],
   },
 ]
@@ -76,11 +72,11 @@ export default function TechStackByService() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {SERVICES.map(({ title, icon: Icon, tags, accent, iconColor }) => (
+          {SERVICES.map(({ title, icon: Icon, tags, accent }) => (
             <motion.div key={title} {...fadeUp} className="sb-card p-6 group">
               <div className="flex items-start gap-4 mb-4">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${accent}`}>
-                  <Icon size={22} className={iconColor} />
+                  <Icon size={22} className="text-gold" />
                 </div>
                 <div className="min-w-0">
                   <h3 className="font-heading font-semibold text-navy leading-snug">{title}</h3>

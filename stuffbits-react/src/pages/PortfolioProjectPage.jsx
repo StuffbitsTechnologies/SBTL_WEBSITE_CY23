@@ -28,7 +28,7 @@ export default function PortfolioProjectPage() {
 
   return (
     <div>
-      <section className="bg-navy-gradient py-16 relative overflow-hidden">
+      <section className="bg-navy py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
           <motion.nav

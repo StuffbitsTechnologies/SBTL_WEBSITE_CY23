@@ -34,7 +34,7 @@ export default function BlogFilter({ search, onSearchChange, category, onCategor
                 isActive
                   ? style
                     ? `text-white shadow-md ${style.badge}`
-                    : 'bg-navy-gradient text-white'
+                    : 'bg-navy text-white'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >

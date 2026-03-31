@@ -46,7 +46,7 @@ export default function Footer() {
   }, [shouldLoadMap])
 
   return (
-    <footer className="bg-navy-gradient text-white">
+    <footer className="bg-navy text-white">
       <div className="h-1 bg-gold" />
       <div className="max-w-container mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">

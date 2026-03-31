@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 
 export default function CtaBanner() {
   return (
-    <section id="contact" className="py-20 bg-navy-gradient">
+    <section id="contact" className="py-20 bg-navy">
       <div className="max-w-container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

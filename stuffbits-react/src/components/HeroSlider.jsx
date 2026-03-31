@@ -186,7 +186,7 @@ export default function HeroSlider() {
   }, [current, intervalMs])
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-navy-gradient -mt-14">
+    <section className="relative min-h-screen overflow-hidden bg-navy -mt-14">
       {/* Slide images - AnimatePresence handles enter/exit animations */}
       <AnimatePresence initial={false} custom={direction} mode="wait">
         <motion.div

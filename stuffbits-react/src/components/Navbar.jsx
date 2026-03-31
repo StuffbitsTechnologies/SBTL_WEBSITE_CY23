@@ -192,7 +192,7 @@ export default function Navbar() {
       <nav className="max-w-container mx-auto px-6 h-14 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
-          <img src="/icon-1.svg" alt="StuffBits" className="h-6" />
+          <img src="/icon-1.svg" alt="StuffBits" className="h-9" />
         </Link>
 
         {/* Desktop Nav */}

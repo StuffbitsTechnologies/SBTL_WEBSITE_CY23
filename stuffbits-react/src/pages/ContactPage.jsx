@@ -126,7 +126,7 @@ export default function ContactPage() {
   return (
     <div>
       {/* Page Hero */}
-      <section className="bg-navy-gradient py-16 relative overflow-hidden">
+      <section className="bg-navy py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
           <motion.nav
@@ -162,7 +162,7 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-0 right-0 top-0 h-20 md:h-24 bg-navy-gradient z-0 [clip-path:polygon(0%_0%,58%_0%,45%_100%,0%_100%)]"
+          className="pointer-events-none absolute left-0 right-0 top-0 h-20 md:h-24 bg-navy z-0 [clip-path:polygon(0%_0%,58%_0%,45%_100%,0%_100%)]"
         />
         <div className="max-w-container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
@@ -341,7 +341,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="flex gap-4 text-slate-600 hover:text-gold transition-colors group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-gradient text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
                       <MapPin size={22} />
                     </div>
                     <div>
@@ -355,7 +355,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="flex gap-4 text-slate-600 hover:text-gold transition-colors group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-gradient text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
                       <MapPin size={22} />
                     </div>
                     <div>
@@ -367,7 +367,7 @@ export default function ContactPage() {
                     href="mailto:contact@stuffbits.in"
                     className="flex gap-4 text-slate-600 hover:text-gold transition-colors group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-gradient text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
                       <Mail size={22} />
                     </div>
                     <div>
@@ -379,7 +379,7 @@ export default function ContactPage() {
                     href="tel:+911234567890"
                     className="flex gap-4 text-slate-600 hover:text-gold transition-colors group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-gradient text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
                       <Phone size={22} />
                     </div>
                     <div>
@@ -393,7 +393,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="flex gap-4 text-slate-600 hover:text-gold transition-colors group"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-gradient text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
                       <MessageCircle size={22} />
                     </div>
                     <div>
@@ -402,7 +402,7 @@ export default function ContactPage() {
                     </div>
                   </a> */}
                   <div className="flex gap-4 text-slate-600">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy-gradient text-gold flex-shrink-0">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-gold flex-shrink-0">
                       <Clock size={22} />
                     </div>
                     <div>
@@ -432,7 +432,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl bg-navy-gradient text-white">
+              <div className="p-6 rounded-xl bg-navy text-white">
                 <p className="font-heading font-semibold text-gold mb-2">Prefer a quick call?</p>
                 <p className="text-slate-300 text-sm mb-4">
                   Schedule a free 15-minute consultation to discuss your embedded or digital project.

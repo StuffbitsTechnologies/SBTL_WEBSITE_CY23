@@ -170,7 +170,7 @@ export default function CareersPage() {
   return (
     <div>
       {/* Hero - Cognizant-style: bold tagline */}
-      <section className="bg-navy-gradient py-14 md:py-20 relative overflow-hidden">
+      <section className="bg-navy py-14 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
           <motion.nav
@@ -388,7 +388,7 @@ export default function CareersPage() {
       </section> */}
 
       {/* Final CTA */}
-      <section className="relative overflow-hidden py-16 md:py-20 bg-navy-gradient">
+      <section className="relative overflow-hidden py-16 md:py-20 bg-navy">
         <AmbientOrbs tone="dark" />
         <div className="max-w-container mx-auto px-6 relative z-10">
           <motion.div

@@ -49,7 +49,7 @@ export default function ServiceDetailPage() {
   return (
     <div className="pb-0">
       {/* Page Hero */}
-      <section className="bg-navy-gradient py-10 md:py-12 relative overflow-hidden">
+      <section className="bg-navy py-10 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
           <motion.nav
@@ -100,7 +100,7 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 bg-navy-gradient">
+      <section className="py-12 bg-navy">
         <div className="max-w-container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 16 }}

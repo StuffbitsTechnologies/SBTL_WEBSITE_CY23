@@ -61,7 +61,7 @@ export default function NewsAndEventsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-navy-gradient py-16 md:py-20 relative overflow-hidden">
+      <section className="bg-navy py-16 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-blue-900/20 pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
           <motion.nav
@@ -136,7 +136,7 @@ export default function NewsAndEventsPage() {
           <motion.div {...fadeUp} className="mt-12 text-center">
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-navy-gradient text-white font-semibold rounded-lg hover:brightness-110 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-navy text-white font-semibold rounded-lg hover:brightness-110 transition-all"
             >
               View all blog articles
               <ArrowRight size={18} />
@@ -146,7 +146,7 @@ export default function NewsAndEventsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-14 bg-navy-gradient text-white">
+      <section className="py-14 bg-navy text-white">
         <div className="max-w-container mx-auto px-6 text-center">
           <motion.h2
             {...fadeUp}

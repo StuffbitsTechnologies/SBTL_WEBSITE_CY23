@@ -33,7 +33,7 @@ export default function Blog() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-navy-gradient py-16 relative overflow-hidden">
+      <section className="bg-navy py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-blue-500/10 pointer-events-none" />
         {/* <AmbientOrbs tone="dark" /> */}
         <div className="max-w-container mx-auto px-6 relative z-10">

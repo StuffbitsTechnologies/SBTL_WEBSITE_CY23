@@ -85,7 +85,7 @@ export default function FooterMap({ tall = false }) {
           href={mapLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-2 right-2 px-3 py-1.5 bg-navy-gradient text-gold text-xs font-medium rounded hover:bg-none hover:bg-gold hover:text-navy transition-colors"
+          className="absolute bottom-2 right-2 px-3 py-1.5 bg-navy text-gold text-xs font-medium rounded hover:bg-none hover:bg-gold hover:text-navy transition-colors"
         >
           Open in Google Maps →
         </a>

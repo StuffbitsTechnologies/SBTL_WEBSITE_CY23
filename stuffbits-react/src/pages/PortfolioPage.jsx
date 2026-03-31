@@ -48,7 +48,7 @@ export default function PortfolioPage() {
   return (
     <div>
       {/* Page Hero */}
-      <section className="bg-navy-gradient py-16 relative overflow-hidden">
+      <section className="bg-navy py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
           <motion.nav
@@ -239,7 +239,7 @@ export default function PortfolioPage() {
                 <div className="flex justify-center mt-12">
                   <button
                     onClick={() => setItemsToShow((n) => n + LOAD_MORE_COUNT)}
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-navy-gradient text-white font-semibold hover:brightness-110 transition-all shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-navy text-white font-semibold hover:brightness-110 transition-all shadow-lg hover:shadow-xl"
                   >
                     Load More <ChevronDown size={20} />
                   </button>
@@ -258,7 +258,7 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-2xl bg-navy-gradient px-8 py-14 md:px-14 md:py-16 text-center"
+            className="relative overflow-hidden rounded-2xl bg-navy px-8 py-14 md:px-14 md:py-16 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
               Have a Similar Project in Mind?

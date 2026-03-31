@@ -24,7 +24,7 @@ export default function LegalPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-navy-gradient py-16 relative overflow-hidden">
+      <section className="bg-navy py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
           <motion.nav
@@ -76,7 +76,7 @@ export default function LegalPage() {
       <section className="max-w-container mx-auto px-6 py-12 bg-white relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-0 right-0 top-0 h-20 md:h-24 bg-navy-gradient z-0 [clip-path:polygon(0%_0%,58%_0%,45%_100%,0%_100%)]"
+          className="pointer-events-none absolute left-0 right-0 top-0 h-20 md:h-24 bg-navy z-0 [clip-path:polygon(0%_0%,58%_0%,45%_100%,0%_100%)]"
         />
         <div className="prose max-w-none space-y-16 text-black relative z-10">
           {/* ─── Part I: Privacy Policy ─── */}
