@@ -74,10 +74,10 @@ export default function LegalPage() {
 
       {/* Content */}
       <section className="max-w-container mx-auto px-6 py-12 bg-white relative overflow-hidden">
-        <div
+        {/* <div
           aria-hidden
           className="pointer-events-none absolute left-0 right-0 top-0 h-20 md:h-24 bg-navy z-0 [clip-path:polygon(0%_0%,58%_0%,45%_100%,0%_100%)]"
-        />
+        /> */}
         <div className="prose max-w-none space-y-16 text-black relative z-10">
           {/* ─── Part I: Privacy Policy ─── */}
           <article id="privacy" className="scroll-mt-24">
