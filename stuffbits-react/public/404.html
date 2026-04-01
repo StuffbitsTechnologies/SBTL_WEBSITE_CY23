@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      // GitHub Pages SPA fallback:
+      // When a user hits a deep link (e.g. /contact), Pages serves /404.html.
+      // We rewrite the URL so the SPA can restore the route after index.html loads.
+      //
+      // Format: /?p=<path>&q=<query>&h=<hash>
+      (function () {
+        var loc = window.location;
+        var path = loc.pathname || "/";
+        var search = loc.search || "";
+        var hash = loc.hash || "";
+
+        // Avoid redirect loops.
+        if (search.indexOf("p=") !== -1) return;
+
+        var newUrl =
+          loc.origin +
+          "/?p=" +
+          encodeURIComponent(path) +
+          "&q=" +
+          encodeURIComponent(search.replace(/^\?/, "")) +
+          "&h=" +
+          encodeURIComponent(hash.replace(/^#/, ""));
+
+        loc.replace(newUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

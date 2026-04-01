@@ -15,12 +15,12 @@ const SOCIAL_LINKS = [
     icon: Instagram,
   },
   {
-    href: 'https://www.facebook.com/stuffbits',
+    href: 'https://www.facebook.com/stuffbits.technologies',
     label: 'Facebook',
     icon: Facebook,
   },
   {
-    href: 'https://wa.me/911234567890',
+    href: 'https://wa.me/919860999078',
     label: 'WhatsApp',
     icon: MessageCircle,
   },
@@ -62,7 +62,7 @@ export default function Footer() {
               Embedded electronics solutions — hardware, firmware, PCB design, IoT, and digital services.
             </p>
             <div className="flex gap-4">
-              {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
+              {SOCIAL_LINKS.map(({ href, label, icon: _Icon }) => (
                 <a
                   key={label}
                   href={href}
@@ -71,7 +71,7 @@ export default function Footer() {
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-200 transition-colors hover:border-gold hover:text-gold hover:bg-gold/5"
                   aria-label={label}
                 >
-                  <Icon size={18} />
+                  <_Icon size={18} />
                 </a>
               ))}
             </div>
@@ -117,11 +117,11 @@ export default function Footer() {
               {/* <p className="flex gap-3">
                 <MapPin size={18} className="flex-shrink-0 mt-0.5 text-gold/80" />
                 <span>WeWork Eleven West, Pancard Club Rd, Baner Gaon, Baner, Pune, Maharashtra 411069</span>
-              </p>
+              </p> */}
               <p>
-                <a href="tel:+911234567890" className="flex items-center gap-3 hover:text-gold transition-colors group">
+                <a href="tel:+919860999078" className="flex items-center gap-3 hover:text-gold transition-colors group">
                   <Phone size={18} className="flex-shrink-0 text-gold/80" />
-                  <span>+91 1234567890</span>
+                  <span>+91 9860999078</span>
                 </a>
               </p>
               <p>
@@ -129,7 +129,7 @@ export default function Footer() {
                   <Mail size={18} className="flex-shrink-0 text-gold/80" />
                   <span>contact@stuffbits.in</span>
                 </a>
-              </p> */}
+              </p>
             </address>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { ArrowRight, CheckCircle2, Layers, Shield } from 'lucide-react'
 
 
@@ -12,7 +12,7 @@ export default function AboutPreview() {
       /> */}
       <div className="sb-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
@@ -22,13 +22,13 @@ export default function AboutPreview() {
             <p className="sb-kicker mb-3">About StuffBits</p>
             <h2 className="sb-h2 mb-6">Who We Are</h2>
             <p className="sb-lead mb-6">
-              Great products are built on great engineering. That's where Stuffbits comes in.
+              Great products are built on great engineering. That's where StuffBits comes in.
             </p>
             <p className="sb-lead mb-6">
               We are an embedded electronics engineering firm with a proven track record across Automotive, Industrial, Pharmaceutical, and IoT sectors. From PCB design and firmware development to protocol integration and connected device deployment — we deliver the full embedded stack, so you can focus on your product, not the complexity behind it.
             </p>
             <p className="sb-lead mb-8">
-              Whether you are validating a prototype or scaling to production, Stuffbits brings deep technical expertise, structured delivery, and a commitment to production-grade quality that moves your project forward — on time and to specification.
+              Whether you are validating a prototype or scaling to production, StuffBits brings deep technical expertise, structured delivery, and a commitment to production-grade quality that moves your project forward — on time and to specification.
             </p>
            
             <Link
@@ -37,8 +37,8 @@ export default function AboutPreview() {
             >
               Learn More About Us <ArrowRight size={18} />
             </Link>
-          </motion.div>
-          <motion.div
+          </Motion.div>
+          <Motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
@@ -63,7 +63,7 @@ export default function AboutPreview() {
                 </picture>
               </div>
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </section>

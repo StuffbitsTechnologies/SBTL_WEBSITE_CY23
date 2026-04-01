@@ -68,7 +68,7 @@ const ORGANIZATION_SCHEMA = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+91-1234567890',
+      telephone: '+91-9860999078',
       contactType: 'customer support',
       areaServed: 'IN',
       availableLanguage: ['English'],
