@@ -121,6 +121,7 @@ export default function LinkedInEventsSection() {
   const hasElfsight = Boolean(ELFSIGHT_APP_ID)
   const postEmbeds = LINKEDIN_POST_EMBEDS.filter((p) => p?.embedSrc?.includes('linkedin.com/embed'))
   const hasAnyEmbed = hasFeedIframe || hasElfsight || postEmbeds.length > 0
+  const hasManualHighlights = LINKEDIN_PAGE_UPDATES.length > 0
 
   return (
     <section className="py-14 md:py-20 bg-gradient-to-b from-slate-50 to-white border-t border-slate-100">
@@ -194,8 +195,28 @@ export default function LinkedInEventsSection() {
           </div>
         )}
 
-        {!hasAnyEmbed && LINKEDIN_PAGE_UPDATES.length > 0 && (
+        {hasManualHighlights && (
           <>
+            {hasAnyEmbed && (
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <div>
+                  <h3 className="text-lg md:text-xl font-heading font-bold text-navy">Highlights</h3>
+                  <p className="text-slate-600 text-sm md:text-base">
+                    Quick highlights we pin here—useful when LinkedIn widgets are delayed.
+                  </p>
+                </div>
+                <a
+                  href={LINKEDIN_COMPANY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 bg-white text-navy font-semibold hover:border-gold/50 hover:text-gold transition-colors shrink-0"
+                >
+                  <Linkedin size={18} />
+                  View on LinkedIn
+                </a>
+              </div>
+            )}
+
             <motion.div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
               variants={gridContainer}
@@ -208,21 +229,23 @@ export default function LinkedInEventsSection() {
               ))}
             </motion.div>
 
-            <div className="flex justify-center mt-10">
-              <motion.a
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.25 }}
-                href={LINKEDIN_COMPANY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-xl hover:brightness-110 transition-all"
-              >
-                Open all posts on LinkedIn
-                <ArrowRight size={18} />
-              </motion.a>
-            </div>
+            {!hasAnyEmbed && (
+              <div className="flex justify-center mt-10">
+                <motion.a
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.25 }}
+                  href={LINKEDIN_COMPANY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-xl hover:brightness-110 transition-all"
+                >
+                  Open all posts on LinkedIn
+                  <ArrowRight size={18} />
+                </motion.a>
+              </div>
+            )}
           </>
         )}
 

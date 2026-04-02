@@ -3,7 +3,7 @@ import { motion as Motion } from 'framer-motion'
 
 // Client logos from stuffbits.in - same "They trusted us" clients as live site
 // Replace 'Client 1', 'Client 2', etc. with actual company names (match logo order 1.png–20.png)
-const STUFFBITS_CLIENTS_BASE = 'https://www.stuffbits.in/assets/img/clients'
+const STUFFBITS_CLIENTS_BASE = 'https://stuffbits.in/assets/img/clients'
 const CLIENT_LOGOS = [
   // { src: `${STUFFBITS_CLIENTS_BASE}/1.png`, name: 'Essen' },
   { src: `${STUFFBITS_CLIENTS_BASE}/2.png`, name: 'Marjan Machinery' },

@@ -11,7 +11,8 @@
 
 /** Official company LinkedIn (Pvt Ltd) */
 export const LINKEDIN_COMPANY_URL =
-  'https://www.linkedin.com/company/stuffbits-technosolutions-pvt-ltd'
+  // 'https://in.linkedin.com/company/stuffbits-technosolutions-pvt-ltd'
+  'https://www.linkedin.com/company/stuffbits-technosolutions-pvt-ltd/'
 
 /**
  * Featured events — edit titles, images, and CTAs. Shown as large cards on /news-and-events.
@@ -82,6 +83,19 @@ export const LINKEDIN_EVENTS_URL = LINKEDIN_COMPANY_URL
  * @type {{ id: string, category: string, timeLabel: string, title: string, excerpt: string, image: string, detail: string[] }[]}
  */
 export const LINKEDIN_PAGE_UPDATES = [
+  {
+    id: 'u0',
+    category: 'Update',
+    timeLabel: 'Today',
+    title: 'Thank you to our clients & partners (FY 2025–26)',
+    image: '/images/about/team-data-center.png',
+    excerpt:
+      'A big thank you to all our clients and partners for being a valued part of our journey in Financial Year 2025–26.',
+    detail: [
+      'A big thank you to all our clients and partners for being a valued part of our journey in Financial Year 2025–26.',
+      'Your support drives our success—looking forward to achieving more together!',
+    ],
+  },
   {
     id: 'u1',
     category: 'Culture',

@@ -2,7 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const SITE_URL = 'https://www.stuffbits.in'
+const SITE_URL = 'https://stuffbits.in'
 
 const staticRoutes = [
   '/',

@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 
-const SITE_URL = 'https://www.stuffbits.in'
+const SITE_URL = 'https://stuffbits.in'
 const DEFAULT_OG_IMAGE = `${SITE_URL}/Company_logo1.png`
 
 const DEFAULT_SEO = {

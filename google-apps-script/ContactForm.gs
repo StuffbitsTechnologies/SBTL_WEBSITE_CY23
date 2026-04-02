@@ -13,9 +13,9 @@
  * 6. Copy the Web app URL and set it as VITE_CONTACT_FORM_URL in .env
  */
 
-const RECIPIENT_EMAIL = 'shubham.thete@stuffbits.in';
-const LOGO_URL        = 'https://www.stuffbits.in/assets/img/logo.png';
-const WEBSITE_URL     = 'https://www.stuffbits.in';
+const RECIPIENT_EMAIL = 'contact@stuffbits.in';
+const LOGO_URL        = 'https://stuffbits.in/assets/img/logo.png';
+const WEBSITE_URL     = 'https://stuffbits.in';
 
 // ─────────────────────────────────────────────
 // Run this ONCE to authorize MailApp.
