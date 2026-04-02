@@ -5,8 +5,7 @@
  * https://www.linkedin.com/company/stuffbits-technosolutions-pvt-ltd
  *
  * LinkedIn does not expose a public API to “fetch” company feeds in the browser.
- * LINKEDIN_PAGE_UPDATES = manually synced highlights (edit when you post).
- * For auto-updates: VITE_LINKEDIN_EVENTS_FEED_IFRAME_SRC or LINKEDIN_POST_EMBEDS.
+ * For feed UI: VITE_LINKEDIN_EVENTS_FEED_IFRAME_SRC, VITE_ELFSIGHT_LINKEDIN_APP_ID, or LINKEDIN_POST_EMBEDS.
  */
 
 /** Official company LinkedIn (Pvt Ltd) */
@@ -77,117 +76,6 @@ export const LINKEDIN_POST_EMBEDS = []
 
 /** @deprecated use LINKEDIN_COMPANY_URL */
 export const LINKEDIN_EVENTS_URL = LINKEDIN_COMPANY_URL
-
-/**
- * Recent public updates — each needs image + detail for on-page story modal.
- * @type {{ id: string, category: string, timeLabel: string, title: string, excerpt: string, image: string, detail: string[] }[]}
- */
-export const LINKEDIN_PAGE_UPDATES = [
-  {
-    id: 'u0',
-    category: 'Update',
-    timeLabel: 'Today',
-    title: 'Thank you to our clients & partners (FY 2025–26)',
-    image: '/images/about/team-data-center.png',
-    excerpt:
-      'A big thank you to all our clients and partners for being a valued part of our journey in Financial Year 2025–26.',
-    detail: [
-      'A big thank you to all our clients and partners for being a valued part of our journey in Financial Year 2025–26.',
-      'Your support drives our success—looking forward to achieving more together!',
-    ],
-  },
-  {
-    id: 'u1',
-    category: 'Culture',
-    timeLabel: 'Recent',
-    title: 'Happy Holi',
-    image: '/images/services/component-assembly.png',
-    excerpt:
-      'Wishing everyone a colourful Holi — positivity, joy, and teamwork at work and beyond.',
-    detail: [
-      'We celebrated Holi with the StuffBits team—colour, laughter, and a reminder that great engineering is built on trust and collaboration.',
-      'Moments like these keep our culture inclusive and energised as we take on complex hardware and firmware challenges together.',
-    ],
-  },
-  {
-    id: 'u2',
-    category: 'Well-being',
-    timeLabel: 'Recent',
-    title: 'Workplace health check-up camp',
-    image: '/images/about/team-data-center.png',
-    excerpt:
-      'Employee health matters. Thank you to Healthians and everyone who joined our on-site health camp.',
-    detail: [
-      'We organised a health check-up camp at our workplace with support from Healthians. A healthy team is core to sustainable delivery and focus.',
-      'Thank you to everyone who participated and to our partners for a smooth camp experience.',
-    ],
-  },
-  {
-    id: 'u3',
-    category: 'Team',
-    timeLabel: 'Recent',
-    title: 'Welcome new engineers',
-    image: '/images/hero/embedded-technology.png',
-    excerpt:
-      'Welcoming Shubham Thete (Junior Software Engineer) and Vijay Morbale (Junior Embedded Engineer) to the team.',
-    detail: [
-      'We welcomed Shubham Thete as Junior Software Engineer and Vijay Morbale as Junior Embedded Engineer.',
-      'Their skills and enthusiasm strengthen our firmware, software, and hardware practices. We are excited to grow together on upcoming programs.',
-    ],
-  },
-  {
-    id: 'u4',
-    category: 'Learning',
-    timeLabel: 'Recent',
-    title: 'EV & embedded session with DIYguru',
-    image: '/images/hero/automotive.png',
-    excerpt:
-      'Kumar Sawant on embedded decisions that shape EV quality — session with DIYguru on real-world EV systems.',
-    detail: [
-      'Our Founder Kumar Sawant led a session on how EV reliability is shaped early in embedded architecture—not only in hardware bring-up.',
-      'Hosted with DIYguru, the talk connected EV safety, performance, faster launches, and career paths in embedded and EV engineering.',
-    ],
-  },
-  {
-    id: 'u5',
-    category: 'Leadership',
-    timeLabel: 'Recent',
-    title: 'ICT Academy Thought Leaders Talk',
-    image: '/images/services/it-development.png',
-    excerpt:
-      'Kumar Sawant speaking on smart manufacturing careers — Industry 4.0, digital skills, and leadership.',
-    detail: [
-      'Kumar Sawant joined ICT Academy’s Thought Leaders Talk Series on smart manufacturing careers—technical, digital, and managerial skills for Industry 4.0.',
-      'The session explored integrated skill development, digital-first manufacturing mindset, and leadership in a transforming industrial landscape.',
-    ],
-  },
-  {
-    id: 'u6',
-    category: 'Milestone',
-    timeLabel: 'Recent',
-    title: 'One year as Private Limited',
-    image: '/images/about/team-data-center.png',
-    excerpt:
-      'Celebrating a year as StuffBits Tech Solutions Pvt Ltd — team outing, togetherness, and momentum ahead.',
-    detail: [
-      'We marked one year as StuffBits Tech Solutions Pvt Ltd with a team outing—celebrating growth, milestones, and the people behind our delivery.',
-      'Recharged and aligned, we are focused on the next phase of embedded product work with clients and partners.',
-    ],
-  },
-  {
-    id: 'u7',
-    category: 'Hiring',
-    timeLabel: 'Recent',
-    title: 'Junior Embedded Engineer — Pune',
-    image: '/images/services/embedded-firmware.png',
-    excerpt:
-      '1–3 years embedded experience, work from office Pune. Share your CV at hr@stuffbits.in.',
-    detail: [
-      'We are hiring a Junior Embedded Engineer (1–3 years) for our Pune office, work from office. Immediate to 15-day joiners preferred.',
-      'Share your resume at hr@stuffbits.in. Full details and updates are posted on our LinkedIn company page.',
-    ],
-  },
-]
 
 /** @type {{ id: string, title: string, excerpt: string, dateLabel: string, href: string, external?: boolean }[]} */
 export const COMPANY_NEWS = [
