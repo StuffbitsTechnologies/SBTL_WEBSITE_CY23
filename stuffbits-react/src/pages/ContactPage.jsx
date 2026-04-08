@@ -180,15 +180,6 @@ export default function ContactPage() {
               <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-8 md:p-10">
                 <h2 className="text-xl font-heading font-semibold text-navy mb-6">Send us a message</h2>
 
-                <div className="mb-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <p className="font-medium text-navy">What happens next</p>
-                  <ul className="mt-2 space-y-1 text-sm text-slate-600">
-                    <li>We review your request and respond within 1 business day.</li>
-                    <li>We may ask 2–3 clarifying questions to confirm scope and timeline.</li>
-                    <li>If it’s a fit, we’ll schedule a short call and share next steps.</li>
-                  </ul>
-                </div>
-
                 {status === 'success' && (
                   <Motion.div
                     initial={{ opacity: 0, scale: 0.96 }}
