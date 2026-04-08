@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "engines": {
-    "node": ">=20.15.0"
+    "node": ">=22.0.0"
   },
   "scripts": {
     "dev": "vite",
     "start:network": "vite --host",
     "prebuild": "node ./scripts/generate-sitemap.mjs",
     "build": "vite build",
-    "postbuild": "react-snap",
+    "prerender": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -14,7 +14,10 @@ const staticRoutes = [
   '/services/component-assembly',
   '/services/it-development',
   '/verticals',
-  // Vertical detail slugs are data-driven; add when stable.
+  '/verticals/automotive',
+  '/verticals/industrial',
+  '/verticals/iot',
+  '/verticals/digital-services',
   '/portfolio',
   '/careers',
   '/blog',
