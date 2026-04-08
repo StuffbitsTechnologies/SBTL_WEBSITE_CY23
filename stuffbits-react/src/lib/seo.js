@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 
-const SITE_URL = 'https://www.stuffbits.in'
+const SITE_URL = 'https://stuffbits.in'
 const DEFAULT_OG_IMAGE = `${SITE_URL}/Company_logo1.png`
 
 const DEFAULT_SEO = {
@@ -68,7 +68,7 @@ const ORGANIZATION_SCHEMA = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+91-1234567890',
+      telephone: '+91-9860999078',
       contactType: 'customer support',
       areaServed: 'IN',
       availableLanguage: ['English'],

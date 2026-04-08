@@ -1,6 +1,6 @@
 import { lazy, Suspense, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import {
   MapPin,
   Mail,
@@ -47,7 +47,7 @@ const SOCIAL_LINKS = [
   { href: 'https://www.linkedin.com/company/stuffbits-technosolutions-pvt-ltd', label: 'LinkedIn', icon: Linkedin },
   { href: 'https://www.instagram.com/_stuffbits_', label: 'Instagram', icon: Instagram },
   { href: 'https://www.facebook.com/stuffbits.technologies', label: 'Facebook', icon: Facebook },
-  { href: 'https://wa.me/911234567890', label: 'WhatsApp', icon: MessageCircle },
+  { href: 'https://wa.me/919860999078', label: 'WhatsApp', icon: MessageCircle },
 ]
 
 const fadeUp = {
@@ -91,6 +91,12 @@ export default function ContactPage() {
 
     const form = e.target
     const formData = new FormData(form)
+    const honeypot = String(formData.get('website') || '').trim()
+    if (honeypot) {
+      setStatus('error')
+      setErrorMessage('Something went wrong. Please try again.')
+      return
+    }
     const payload = {
       contactType: formData.get('contactType') || 'Inquiry',
       service: formData.get('service') || 'General Inquiry',
@@ -129,7 +135,7 @@ export default function ContactPage() {
       <section className="bg-navy py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
-          <motion.nav
+          <Motion.nav
             initial={{ opacity: 0, x: -12 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
@@ -138,23 +144,23 @@ export default function ContactPage() {
             <Link to="/" className="hover:text-gold transition-colors">Home</Link>
             <span className="mx-2">/</span>
             <span className="text-gold">Contact</span>
-          </motion.nav>
-          <motion.h1
+          </Motion.nav>
+          <Motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl font-heading font-bold text-white"
           >
             Get in Touch
-          </motion.h1>
-          <motion.p
+          </Motion.h1>
+          <Motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-slate-300 mt-3 text-lg max-w-2xl"
           >
             Ready to build your next embedded product? Start a project, ask a technical question, or join our team.
-          </motion.p>
+          </Motion.p>
         </div>
       </section>
 
@@ -167,15 +173,24 @@ export default function ContactPage() {
         <div className="max-w-container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Form - takes 3 cols on large screens */}
-            <motion.div
+            <Motion.div
               {...fadeUp}
               className="lg:col-span-3"
             >
               <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-8 md:p-10">
                 <h2 className="text-xl font-heading font-semibold text-navy mb-6">Send us a message</h2>
 
+                <div className="mb-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p className="font-medium text-navy">What happens next</p>
+                  <ul className="mt-2 space-y-1 text-sm text-slate-600">
+                    <li>We review your request and respond within 1 business day.</li>
+                    <li>We may ask 2–3 clarifying questions to confirm scope and timeline.</li>
+                    <li>If it’s a fit, we’ll schedule a short call and share next steps.</li>
+                  </ul>
+                </div>
+
                 {status === 'success' && (
-                  <motion.div
+                  <Motion.div
                     initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="mb-6 p-4 rounded-lg bg-emerald-50 border border-emerald-200 flex items-start gap-3"
@@ -185,11 +200,11 @@ export default function ContactPage() {
                       <p className="font-medium text-emerald-800">Thank you!</p>
                       <p className="text-emerald-700 text-sm mt-1">We&apos;ll get back to you within 1 business day.</p>
                     </div>
-                  </motion.div>
+                  </Motion.div>
                 )}
 
                 {status === 'error' && (
-                  <motion.div
+                  <Motion.div
                     initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="mb-6 p-4 rounded-lg bg-red-50 border border-red-200 flex items-start gap-3"
@@ -199,10 +214,14 @@ export default function ContactPage() {
                       <p className="font-medium text-red-800">Submission failed</p>
                       <p className="text-red-700 text-sm mt-1">{errorMessage}</p>
                     </div>
-                  </motion.div>
+                  </Motion.div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="hidden" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+                  </div>
                   {/* Contact type selector */}
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-3">I want to</label>
@@ -325,10 +344,10 @@ export default function ContactPage() {
                   </button>
                 </form>
               </div>
-            </motion.div>
+            </Motion.div>
 
             {/* Contact details - 2 cols */}
-            <motion.div
+            <Motion.div
               {...fadeUp}
               className="lg:col-span-2 space-y-8"
             >
@@ -376,7 +395,7 @@ export default function ContactPage() {
                     </div>
                   </a>
                   <a
-                    href="tel:+911234567890"
+                    href="tel:+919860999078"
                     className="flex gap-4 text-slate-600 hover:text-gold transition-colors group"
                   >
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-gold flex-shrink-0 group-hover:bg-none group-hover:bg-gold group-hover:text-navy transition-colors">
@@ -384,11 +403,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-medium text-slate-800">Phone</p>
-                      <p>+91 1234567890</p>
+                      <p>+91 9860999078</p>
                     </div>
                   </a>
                   {/* <a
-                    href="https://wa.me/911234567890"
+                    href="https://wa.me/919860999078"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex gap-4 text-slate-600 hover:text-gold transition-colors group"
@@ -398,7 +417,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-medium text-slate-800">WhatsApp</p>
-                      <p>+91 1234567890</p>
+                      <p>+91 9860999078</p>
                     </div>
                   </a> */}
                   <div className="flex gap-4 text-slate-600">
@@ -417,7 +436,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-heading font-semibold text-slate-800 mb-4">Connect with us</h3>
                 <div className="flex gap-3">
-                  {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
+                  {SOCIAL_LINKS.map(({ href, label, icon: _Icon }) => (
                     <a
                       key={label}
                       href={href}
@@ -426,7 +445,7 @@ export default function ContactPage() {
                       className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-slate-200 text-slate-600 hover:border-gold hover:text-gold hover:bg-gold/5 transition-colors"
                       aria-label={label}
                     >
-                      <Icon size={20} />
+                      <_Icon size={20} />
                     </a>
                   ))}
                 </div>
@@ -438,7 +457,7 @@ export default function ContactPage() {
                   Schedule a free 15-minute consultation to discuss your embedded or digital project.
                 </p>
                 <a
-                  href="https://wa.me/911234567890?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20StuffBits."
+                  href="https://wa.me/919860999078?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20StuffBits."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold hover:bg-gold-light text-navy font-semibold rounded-lg transition-colors"
@@ -447,20 +466,20 @@ export default function ContactPage() {
                   Chat on WhatsApp
                 </a>
               </div>
-            </motion.div>
+            </Motion.div>
           </div>
         </div>
       </section>
 
       {/* <section className="py-12 md:py-16 bg-slate-100 border-t border-slate-200">
         <div className="max-w-container mx-auto px-6">
-          <motion.h2
+          <Motion.h2
             {...fadeUp}
             className="text-xl font-heading font-semibold text-navy mb-6"
           >
             Hadapsar office
-          </motion.h2>
-          <motion.div
+          </Motion.h2>
+          <Motion.div
             {...fadeUp}
             transition={{ ...fadeUp.transition, delay: 0.05 }}
             className="rounded-xl overflow-hidden border border-slate-200 shadow-lg bg-white [&_iframe]:w-full [&_iframe]:h-80 [&_iframe]:md:h-96 [&_iframe]:rounded-none"
@@ -475,7 +494,7 @@ export default function ContactPage() {
             >
               <FooterMap />
             </Suspense>
-          </motion.div>
+          </Motion.div>
         </div>
       </section> */}
     </div>

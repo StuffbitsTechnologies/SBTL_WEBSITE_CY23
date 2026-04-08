@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { Cpu, Code, Package, Monitor, ArrowRight } from 'lucide-react'
 import TechStackByService from '../components/home/TechStackByService'
 
@@ -38,7 +38,7 @@ export default function ServicesPage() {
       <section className="bg-navy py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-container mx-auto px-6 relative">
-          <motion.nav
+          <Motion.nav
             initial={{ opacity: 0, x: -12 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
@@ -49,23 +49,25 @@ export default function ServicesPage() {
             </Link>
             <span className="mx-2">/</span>
             <span className="text-gold">Services</span>
-          </motion.nav>
-          <motion.h1
+          </Motion.nav>
+          <Motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-5xl font-heading font-bold text-white mb-4"
           >
             Our Services
-          </motion.h1>
-          <motion.p
+          </Motion.h1>
+          <Motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-slate-300 max-w-2xl"
           >
-           From schematic to shelf, StuffBits covers every bit of your embedded product.<br></br> Hardware, firmware, PCB, assembly, and the companion website and/or mobile app — all under one roof, built to ship.
-          </motion.p>
+            From schematic to shelf, StuffBits covers every part of your embedded product.
+            <br />
+            Hardware, firmware, PCB, assembly, and companion web/mobile apps — all under one roof, built to ship.
+          </Motion.p>
         </div>
       </section>
 
@@ -73,8 +75,8 @@ export default function ServicesPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-container mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {SERVICES.map(({ slug, label, icon: Icon, description }, i) => (
-              <motion.div
+            {SERVICES.map(({ slug, label, icon: _Icon, description }, i) => (
+              <Motion.div
                 key={slug}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -85,7 +87,7 @@ export default function ServicesPage() {
                   className="block h-full p-6 rounded-xl bg-white border border-slate-200 hover:border-gold/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
-                    <Icon className="text-gold" size={24} />
+                    <_Icon className="text-gold" size={24} />
                   </div>
                   <h3 className="font-heading font-semibold text-navy mb-2 group-hover:text-gold transition-colors">
                     {label}
@@ -95,7 +97,7 @@ export default function ServicesPage() {
                     Learn More <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         </div>
@@ -106,7 +108,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -133,7 +135,7 @@ export default function ServicesPage() {
                 View Our Work
               </Link>
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
     </div>

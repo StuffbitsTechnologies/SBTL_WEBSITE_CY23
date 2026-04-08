@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 
 // Client logos from stuffbits.in - same "They trusted us" clients as live site
 // Replace 'Client 1', 'Client 2', etc. with actual company names (match logo order 1.png–20.png)
@@ -40,7 +40,7 @@ export default function ClientsTrusted() {
   return (
     <section className="py-20 bg-slate-50 overflow-hidden">
       <div className="max-w-container mx-auto px-6">
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -50,16 +50,16 @@ export default function ClientsTrusted() {
             Clients
           </h2>
           <p className="text-slate-600 text-lg">They trusted us</p>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="relative"
         >
           <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-            <motion.div
+            <Motion.div
               className="flex shrink-0 gap-12 md:gap-20 px-4 py-12"
               animate={{ x: [0, '-50%'] }}
               transition={{
@@ -95,9 +95,9 @@ export default function ClientsTrusted() {
                   )}
                 </div>
               ))}
-            </motion.div>
+            </Motion.div>
           </div>
-        </motion.div>
+        </Motion.div>
 
         <p className="text-center text-slate-500 text-sm mt-8">
           Trusted by 50+ companies worldwide

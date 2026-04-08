@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion as Motion, useInView } from 'framer-motion'
 
 const STATS = [
   { value: 50, suffix: '+', label: 'Clients Worldwide' },
   { value: 200, suffix: '+', label: 'Projects Delivered' },
-  { value: 10, suffix: '+', label: 'Years of Experience' },
-  { value: 4, suffix: '', label: 'Industry Verticals' },
+  { value: 5, suffix: '+', label: 'Years of Experience' },
+  { value: 4, suffix: '+', label: 'Industry Verticals' },
 ]
 
 function AnimatedNumber({ value, suffix, inView }) {
@@ -43,7 +43,7 @@ export default function StatsBar() {
   return (
     <section ref={ref} className="bg-navy py-14">
       <div className="max-w-container mx-auto px-6">
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -57,7 +57,7 @@ export default function StatsBar() {
               <p className="text-slate-400 text-sm md:text-base">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   )

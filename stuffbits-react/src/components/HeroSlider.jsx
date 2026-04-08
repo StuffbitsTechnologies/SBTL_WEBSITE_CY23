@@ -16,7 +16,6 @@ const SLIDES = [
     ctaSecondary: 'View Our Work',
     ctaSecondaryLink: '/portfolio',
     video: '/videos/embedded-iot-hero.mp4',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=85', // fallback/poster
     durationMs: 10000, // first slide (video) stays longer
   },
   {
@@ -27,7 +26,6 @@ const SLIDES = [
     cta: 'Explore Automotive',
     ctaLink: '/verticals',
     video: '/videos/automotive-embedded-tech.mp4',
-    image: '/assets/blog/automotive-software-vr.png',
     durationMs: 10000,
   },
   {

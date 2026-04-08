@@ -3,6 +3,7 @@ import HeroSlider from '../components/HeroSlider'
 import StatsBar from '../components/home/StatsBar'
 import AboutPreview from '../components/home/AboutPreview'
 import ClientsTrusted from '../components/home/ClientsTrusted'
+// import Testimonials from '../components/home/Testimonials'
 import ServicesOverview from '../components/home/ServicesOverview'
 import IndustryVerticals from '../components/home/IndustryVerticals'
 import WhyChooseUs from '../components/home/WhyChooseUs'
@@ -20,6 +21,7 @@ export default function HomePage() {
       <StatsBar />
       <AboutPreview />
       <ClientsTrusted />
+      {/* <Testimonials /> */}
       <ServicesOverview />
       <IndustryVerticals />
       <WhyChooseUs />

@@ -267,7 +267,7 @@ export default function LegalPage() {
               <li><strong>Operating name:</strong> StuffBits Technologies</li>
               <li><strong>Registered address:</strong> 2nd Floor, Royal House, Near Gp Pradhan Garden Road, Bhosale Nagar, Hadapsar, Pune 411028, Maharashtra</li>
               <li><strong>Other office:</strong> WeWork Eleven West, Pancard Club Rd, Baner Gaon, Baner, Pune, Maharashtra 411069</li>
-              <li><strong>Contact:</strong> <a href="mailto:contact@stuffbits.in" className="text-gold hover:underline">contact@stuffbits.in</a> | +91 1234567890</li>
+              <li><strong>Contact:</strong> <a href="mailto:contact@stuffbits.in" className="text-gold hover:underline">contact@stuffbits.in</a> | +91 9860999078</li>
               <li><strong>CIN / GSTIN / PAN:</strong> Available on request or as required by law. Update these when publishing to production.</li>
             </ul>
 

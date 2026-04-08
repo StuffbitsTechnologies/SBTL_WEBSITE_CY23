@@ -1,34 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Linkedin, ArrowRight } from 'lucide-react'
-import {
-  LINKEDIN_POST_EMBEDS,
-  LINKEDIN_COMPANY_URL,
-  LINKEDIN_PAGE_UPDATES,
-} from '../../lib/eventsNewsData'
-import EventStoryModal from './EventStoryModal'
+import { Linkedin } from 'lucide-react'
+import { LINKEDIN_POST_EMBEDS, LINKEDIN_COMPANY_URL } from '../../lib/eventsNewsData'
 
 const FEED_IFRAME_SRC = import.meta.env.VITE_LINKEDIN_EVENTS_FEED_IFRAME_SRC?.trim() || ''
 const FEED_IFRAME_HEIGHT = Number(import.meta.env.VITE_LINKEDIN_EVENTS_FEED_IFRAME_HEIGHT) || 920
 const ELFSIGHT_APP_ID = import.meta.env.VITE_ELFSIGHT_LINKEDIN_APP_ID?.trim() || ''
-
-const gridContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.08 },
-  },
-}
-
-const gridItem = {
-  hidden: { opacity: 0, y: 36, scale: 0.97 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { type: 'spring', damping: 22, stiffness: 280 },
-  },
-}
 
 function ElfsightFeed({ appId }) {
   useEffect(() => {
@@ -73,50 +50,7 @@ function PostEmbedCard({ embedSrc, index }) {
   )
 }
 
-function LinkedInImageCard({ item, index, onOpen }) {
-  return (
-    <motion.button
-      type="button"
-      variants={gridItem}
-      onClick={() => onOpen(item)}
-      className="group relative text-left w-full min-h-[300px] sm:min-h-[340px] rounded-2xl overflow-hidden shadow-lg border border-slate-200/60 focus:outline-none focus-visible:ring-4 focus-visible:ring-gold/50"
-      whileHover={{ scale: 1.02, y: -6 }}
-      whileTap={{ scale: 0.99 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 22 }}
-    >
-      <img
-        src={item.image}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/20 opacity-95 group-hover:opacity-100 transition-opacity duration-500" />
-      {/* subtle shine on hover */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-      <div className="relative h-full min-h-[300px] sm:min-h-[340px] flex flex-col justify-end p-6 sm:p-7">
-        <div className="flex items-center justify-between gap-2 mb-2">
-          <span className="inline-block px-2.5 py-0.5 rounded text-[10px] sm:text-xs font-bold uppercase tracking-widest bg-gold text-navy">
-            {item.category}
-          </span>
-          <span className="text-xs text-white/70 font-medium">{item.timeLabel}</span>
-        </div>
-        <h3 className="font-heading text-xl sm:text-2xl font-bold text-white leading-tight mb-3 drop-shadow-md group-hover:text-gold transition-colors duration-300">
-          {item.title}
-        </h3>
-        <p className="text-white/90 text-[13px] sm:text-sm line-clamp-3 leading-relaxed mb-5">
-          {item.excerpt}
-        </p>
-        <span className="inline-flex items-center gap-2 text-gold font-bold text-xs sm:text-sm uppercase tracking-widest group-hover:gap-3 transition-all">
-          Read story
-          <ArrowRight size={18} className="shrink-0" />
-        </span>
-      </div>
-    </motion.button>
-  )
-}
-
 export default function LinkedInEventsSection() {
-  const [story, setStory] = useState(null)
   const hasFeedIframe = Boolean(FEED_IFRAME_SRC)
   const hasElfsight = Boolean(ELFSIGHT_APP_ID)
   const postEmbeds = LINKEDIN_POST_EMBEDS.filter((p) => p?.embedSrc?.includes('linkedin.com/embed'))
@@ -194,39 +128,7 @@ export default function LinkedInEventsSection() {
           </div>
         )}
 
-        {!hasAnyEmbed && LINKEDIN_PAGE_UPDATES.length > 0 && (
-          <>
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-              variants={gridContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-60px' }}
-            >
-              {LINKEDIN_PAGE_UPDATES.map((item, i) => (
-                <LinkedInImageCard key={item.id} item={item} index={i} onOpen={setStory} />
-              ))}
-            </motion.div>
-
-            <div className="flex justify-center mt-10">
-              <motion.a
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.25 }}
-                href={LINKEDIN_COMPANY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-xl hover:brightness-110 transition-all"
-              >
-                Open all posts on LinkedIn
-                <ArrowRight size={18} />
-              </motion.a>
-            </div>
-          </>
-        )}
-
-        {!hasAnyEmbed && LINKEDIN_PAGE_UPDATES.length === 0 && (
+        {!hasAnyEmbed && (
           <div className="rounded-2xl bg-slate-50 border border-slate-200 p-10 text-center">
             <a
               href={LINKEDIN_COMPANY_URL}
@@ -240,16 +142,6 @@ export default function LinkedInEventsSection() {
           </div>
         )}
       </div>
-
-      <EventStoryModal
-        open={Boolean(story)}
-        onClose={() => setStory(null)}
-        title={story?.title}
-        category={story?.category}
-        timeLabel={story?.timeLabel}
-        image={story?.image}
-        paragraphs={story?.detail || []}
-      />
     </section>
   )
 }

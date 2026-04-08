@@ -13,7 +13,7 @@
  * 6. Copy the Web app URL and set it as VITE_CONTACT_FORM_URL in .env
  */
 
-const RECIPIENT_EMAIL = 'shubham.thete@stuffbits.in';
+const RECIPIENT_EMAIL = 'contact@stuffbits.in';
 const LOGO_URL        = 'https://stuffbits.in/assets/img/logo.png';
 const WEBSITE_URL     = 'https://stuffbits.in';
 
@@ -285,7 +285,7 @@ function getEmailTemplate(data) {
                  style="color:#2563eb; font-size:13px; font-family:Arial,sans-serif;
                          text-decoration:none; margin:0 6px;">Facebook</a>
               <span style="color:#cbd5e1;">|</span>
-              <a href="https://wa.me/911234567890"
+              <a href="https://wa.me/919860999078"
                  style="color:#2563eb; font-size:13px; font-family:Arial,sans-serif;
                          text-decoration:none; margin:0 6px;">WhatsApp</a>
             </td>

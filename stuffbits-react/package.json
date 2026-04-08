@@ -9,9 +9,29 @@
   "scripts": {
     "dev": "vite",
     "start:network": "vite --host",
+    "prebuild": "node ./scripts/generate-sitemap.mjs",
     "build": "vite build",
+    "postbuild": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "skipThirdPartyRequests": true,
+    "preconnectThirdParty": false,
+    "include": [
+      "/",
+      "/about",
+      "/team",
+      "/services",
+      "/verticals",
+      "/portfolio",
+      "/careers",
+      "/blog",
+      "/news-and-events",
+      "/contact",
+      "/legal"
+    ]
   },
   "dependencies": {
     "@glidejs/glide": "^3.7.1",
@@ -26,6 +46,7 @@
     "react-dom": "^19.2.4",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.1",
+    "react-snap": "^1.23.0",
     "remark-gfm": "^4.0.1",
     "three": "^0.183.2"
   },
