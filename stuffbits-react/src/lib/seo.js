@@ -31,6 +31,18 @@ const ROUTE_SEO = [
       'Embedded and software engineering solutions for automotive, industrial, IIoT, and digital product teams.',
   },
   {
+    match: (path) => path === '/products',
+    title: 'Products | StuffBits Technologies',
+    description:
+      'Explore StuffBits products including cleanroom monitors and embedded field devices for pharmaceutical and industrial environments.',
+  },
+  {
+    match: (path) => path.startsWith('/products/'),
+    title: 'Product | StuffBits Technologies',
+    description:
+      'Technical overview, features, applications, and specifications for StuffBits embedded products.',
+  },
+  {
     match: (path) => path === '/about' || path === '/team',
     title: 'About StuffBits | Engineering Team and Company',
     description:
