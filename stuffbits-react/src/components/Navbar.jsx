@@ -80,6 +80,7 @@ const navLinks = [
       },
     ],
   },
+  { to: '/products', label: 'Products' },
   { to: '/portfolio', label: 'Portfolio' },
   {
     label: 'About',
@@ -300,14 +301,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        {/* CTA */}
-        <Link
-          to="/contact"
-          className="hidden lg:inline-flex sb-btn-primary px-5 py-2 rounded-xl"
-        >
-          Get a Quote
-        </Link>
 
         {/* Mobile toggle */}
         <button

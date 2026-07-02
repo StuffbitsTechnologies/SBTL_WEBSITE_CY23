@@ -1,8 +1,20 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // Google and legacy links may point to /index.html; React Router only serves /.
+      (function () {
+        var path = window.location.pathname
+        if (path === '/index.html' || path.endsWith('/index.html')) {
+          window.location.replace(
+            window.location.origin + '/' + window.location.search + window.location.hash
+          )
+        }
+      })()
+    </script>
+    <link rel="canonical" href="https://stuffbits.in/" />
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Company_logo1.png" />
+    <link rel="icon" type="image/svg+xml" href="/i-letter.svg" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover"

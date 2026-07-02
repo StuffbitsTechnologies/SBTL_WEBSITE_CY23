@@ -9,6 +9,8 @@ const ServicesPage = lazy(() => import('./pages/ServicesPage'))
 const ServiceDetailPage = lazy(() => import('./pages/ServiceDetailPage'))
 const VerticalsPage = lazy(() => import('./pages/VerticalsPage'))
 const VerticalDetailPage = lazy(() => import('./pages/VerticalDetailPage'))
+const ProductsPage = lazy(() => import('./pages/ProductsPage'))
+const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage'))
 const PortfolioPage = lazy(() => import('./pages/PortfolioPage'))
 const PortfolioProjectPage = lazy(() => import('./pages/PortfolioProjectPage'))
 const CareersPage = lazy(() => import('./pages/CareersPage'))
@@ -48,6 +50,8 @@ function App() {
             <Route path="services/:slug" element={<ServiceDetailPage />} />
             <Route path="verticals" element={<VerticalsPage />} />
             <Route path="verticals/:slug" element={<VerticalDetailPage />} />
+            <Route path="products" element={<ProductsPage />} />
+            <Route path="products/:slug" element={<ProductDetailPage />} />
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="portfolio/:id" element={<PortfolioProjectPage />} />
             <Route path="about" element={<AboutPage />} />

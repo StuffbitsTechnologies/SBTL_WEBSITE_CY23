@@ -14,6 +14,8 @@ if (typeof window !== 'undefined') {
     const h = url.searchParams.get('h') || ''
     const next = `${p}${q ? `?${q}` : ''}${h ? `#${h}` : ''}`
     window.history.replaceState(null, '', next)
+  } else if (url.pathname === '/index.html' || url.pathname.endsWith('/index.html')) {
+    window.location.replace(`${url.origin}/${url.search}${url.hash}`)
   }
 }
 
