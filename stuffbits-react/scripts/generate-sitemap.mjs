@@ -60,7 +60,7 @@ async function main() {
 
   const urls = Array.from(routes)
     .sort((a, b) => a.localeCompare(b))
-    .map((route) => `${SITE_URL}${route === '/' ? '' : route}`)
+    .map((route) => (route === '/' ? `${SITE_URL}/` : `${SITE_URL}${route}`))
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">\n` +
